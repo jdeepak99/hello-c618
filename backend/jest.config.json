@@ -1,0 +1,11 @@
+{
+  "testEnvironment": "node",
+  "testMatch": ["**/__tests__/**/*.js"],
+  "testPathIgnorePatterns": ["<rootDir>/src/test/"],
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  },
+  "globalSetup": "<rootDir>/src/test/globalSetup.js",
+  "globalTeardown": "<rootDir>/src/test/globalTeardown.js",
+  "setupFilesAfterEnv": ["<rootDir>/src/test/setupFileAfterEnv.js"]
+}

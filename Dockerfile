@@ -7,5 +7,6 @@ RUN npm install
 COPY . .
 RUN npm run build
 FROM nginx AS final
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 WORKDIR /usr/share/nginx/html
 COPY --from=build /build/dist .
